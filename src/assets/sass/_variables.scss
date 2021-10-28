@@ -1,0 +1,65 @@
+$blanco: #f4f4f4;
+$negro: #131313;
+$primary: #1ac6cc;
+$secondary: #e72de7;
+
+$paddingSide: 90px;
+$separacion: 1.2em;
+$radius: 33px;
+$shadow: -2px 13px 42px -17px rgba(0, 0, 0, 0.8);
+
+@mixin gradient($primero, $segundo) {
+    background: linear-gradient(to right, $primero 50%, $segundo 0);
+
+}
+
+@mixin section($background) {
+    padding: 0 0 0 $paddingSide;
+    height: 100vh;
+    background-color: $background;
+}
+
+
+@mixin button($background) {
+    background-color: $background;
+    padding: .3em 1em;
+    margin: 1em 0;
+    color: white;
+    border-radius: 33px;
+    font-size:calc(1rem + .3vw);
+    display: block;
+    width: 100%;
+    max-width:330px;
+    border: 2px solid transparent;
+    text-align: center;
+    -webkit-box-shadow: -2px 13px 42px -17px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: -2px 13px 42px -17px rgba(0, 0, 0, 0.8);
+    box-shadow: -2px 13px 42px -17px rgba(0, 0, 0, 0.8);
+    transition: all .6s ease;
+}
+
+@mixin menu-hover($palabra) {
+        font-family: 'Alegreya Sans SC',
+        sans-serif;
+        content: $palabra;
+        position: absolute;
+        inset: 0;
+        top: -40%;
+        left: 95%;
+        padding: .3em .2em;
+        height: max-content;
+        font-size: 1rem;
+        text-align: center;
+        z-index: 15;
+        overflow: visible;
+        display: block;
+        width: 100px;   
+        transition: all 2s ease;
+        transition-delay: .5s;
+        opacity: 0;
+        font-weight: 300;
+        background: $negro;
+        color: white;
+        border-radius: $radius $radius $radius 0;
+
+}
