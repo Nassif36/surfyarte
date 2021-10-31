@@ -20,5 +20,13 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+echo "# surfyarte" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Nassif36/surfyarte.git
+git push -u origin main
+
+
+
