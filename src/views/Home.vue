@@ -4,42 +4,34 @@
             
     <section class="home-text">
       <div class="home-text-h1">
-        <h1>Aprende a surfear</h1>
+        <h1>Aprende</h1>
+          <h1>divertite</h1>
       <h1>puli tu surfing</h1>
-      <h1>divertite</h1>
-
       <a href="" class="btn-reserva">Reserva</a>
       
       </div>
       
     </section>
     <section class="home-fade">
-      <div class="fade-item">
-        <img src="/img/all.png" alt="">
+     <div class="home-grid">
+        <div class="fade-item">
+        <img src="~@/assets/group.png" alt="">
       </div>
-      <div class="fade-item">
-        <img src="/img/all.png" alt="">
-      </div>
-      <div class="fade-item">
-        <img src="/img/all.png" alt="">
-      </div>
+     
+     </div>
     </section>
   </main>
 
-    <!-- <homeSlide /> -->
+
 
 </template>
 
 <script>
-// @ is an alias to /src
 
-// import homeSlide from '@/components/homeSlide.vue'
 
 export default {
   name: 'Home',
-  // components: {
-  //   homeSlide
-  // }
+  
 
 }
 
@@ -54,50 +46,85 @@ export default {
     height: 100vh;
     background: #f4f4f4;
      background: linear-gradient( to right, $blanco 50%, $primary 0);
-}
-.home-text {
+     .home-text {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width:55%;
-   
-
+    width:100%;
+    flex-basis: 50%;
     height: 85%;
-   
+
   .home-text-h1 {
-    background: #f4f4f4;
+
     border-radius: 1px;
     padding: 1em 2em ;
-    -webkit-box-shadow: -2px 13px 42px -17px rgba(0, 0, 0, 0.8);
-    -moz-box-shadow: -2px 13px 42px -17px rgba(0, 0, 0, 0.8);
-    box-shadow: -2px 13px 42px -17px rgba(0, 0, 0, 0.8);
-
- 
-
+  
+    border-bottom: 5px solid black;
+    
   }
     h1 {
       text-align: left;
-
       color: #131313;
       line-height: 90%;
     }
     
 }
+     .home-fade {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       flex-basis: 50%;
+        height:100vh;
+      
+       .home-grid {
+         display: grid;
+
+         padding:0 12%;
+         gap: 2em 2em;
+          place-content: center;
+         justify-content: space-around;
+         width: 100%;
+         .fade-item {
+
+           
+          max-width: 450px;
+          max-height: 70vh;
+          padding: 5% 0;
+         
+            img {
+                display: block;
+                height: 100%;
+                width: 100%;
+                max-width: 650px;
+                max-height: 900px;
+                aspect-ratio: 1 / 2;
+                object-fit: cover;
+                @include shadow;  
+            } 
+          
+           }
+           
+
+         }
+       }
+
+     }
+
+
 
 
 .btn-reserva {
-    @include button($secondary);
+    @include button($green);
 
-    
-}
+ &:hover {
+   background: #f4f4f4;
 
-.btn-reserva:hover {
-    background: #f4f4f4;
     color: #131313;
     box-shadow: 0;
-    border-color: #e72de7;
+ }   
 }
+
 
 .btn-reserva::after {
     content: '\2192';

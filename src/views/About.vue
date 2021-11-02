@@ -10,7 +10,7 @@
         Arranca el verano en Miramar somos 
         <a href="https://www.instagram.com/escueladesurfyarte/">@escueladesurfyarte</a> contamos con
         amplia experiencia que nos avala hace más de 20 años. Las Clases de
-        surf tienen una duración de 2 horas, incluye el equipo, trajes y tablas Soft especiales para principiantes. También
+        surf tienen una duración de 2 horas, incluye el equipo, trajes y tablas soft especiales para principiantes. También
         incluye el instructor dentro y fuera del agua! teórica y práctica súper
         completa, para todos los niveles con ejercicios con simuladores en seco
         de <a href="https://www.instagram.com/ikanpariboards/">@ikanpariboards</a> 
@@ -28,13 +28,22 @@
       <div class="about-item"></div>
       <div class="about-item"></div>
     </div>
+    
   </div>
 </template>
+<script>
 
+
+export default {
+  name: 'About',
+
+}
+
+</script>
 <style lang="scss" scoped>
 .about {
   @include section($secondary);
-  @include gradient($blanco, $secondary);
+  @include gradient($blanco, $primary);
   display: flex;
   align-items: center;
   justify-content: space-between;

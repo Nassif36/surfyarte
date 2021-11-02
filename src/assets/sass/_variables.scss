@@ -2,6 +2,7 @@ $blanco: #f4f4f4;
 $negro: #131313;
 $primary: #1ac6cc;
 $secondary: #e72de7;
+$green: #1fb326;
 
 $paddingSide: 90px;
 $separacion: 1.2em;
@@ -19,6 +20,11 @@ $shadow: -2px 13px 42px -17px rgba(0, 0, 0, 0.8);
     background-color: $background;
 }
 
+@mixin shadow {
+       -webkit-box-shadow: -2px 13px 42px -17px rgba(0, 0, 0, 0.8);
+       -moz-box-shadow: -2px 13px 42px -17px rgba(0, 0, 0, 0.8);
+       box-shadow: -2px 13px 42px -17px rgba(0, 0, 0, 0.8);
+}
 
 @mixin button($background) {
     background-color: $background;
@@ -44,7 +50,7 @@ $shadow: -2px 13px 42px -17px rgba(0, 0, 0, 0.8);
         content: $palabra;
         position: absolute;
         inset: 0;
-        top: -40%;
+        top: 0%;
         left: 95%;
         padding: .3em .2em;
         height: max-content;
@@ -54,12 +60,12 @@ $shadow: -2px 13px 42px -17px rgba(0, 0, 0, 0.8);
         overflow: visible;
         display: block;
         width: 100px;   
-        transition: all 2s ease;
-        transition-delay: .5s;
+        transition: all 1s ease;
+        transition-delay: .2s;
         opacity: 0;
         font-weight: 300;
         background: $negro;
         color: white;
-        border-radius: $radius $radius $radius 0;
+        border-radius: 3px;
 
 }

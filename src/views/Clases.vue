@@ -28,7 +28,15 @@
     </div>
   </div>
 </template>
+<script>
 
+
+export default {
+  name: 'Clases',
+
+}
+
+</script>
 <style lang="scss" scoped>
 
   .form-clases {

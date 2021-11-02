@@ -1,7 +1,7 @@
 <template>
  <aside class="home-redes" :class="{ show: showSidebar }">
     <a href="/" class="logo">
-      <a href="/"> <img src="~@/assets/logo.png" alt=""/></a>
+      <img src="~@/assets/logo.png" alt=""/>
     </a>
 
     <div class="home-navigation">
@@ -12,21 +12,21 @@
       </div>
 
       
-      <router-link class="nav-link" to="/"  >
+      <router-link  to="/"   class="nav-link">
         <div class="link-box">
           <i class="fas fa-home"></i>
           <p>Home</p>
         </div>
       </router-link>
 
-      <router-link class="nav-link" to="/about">
+      <router-link  to="/about" class="nav-link">
         <div class="link-box">
           <i class="fas fa-info"></i>
           <p>About</p>
         </div>
       </router-link>
 
-      <router-link class="nav-link" to="/clases">
+      <router-link  to="/clases" class="nav-link">
         <div class="link-box">
           <i class="fas fa-calendar"></i>
           <p>Reserva</p>
@@ -46,9 +46,13 @@
       </div>
     </div>
   </aside> 
-
-  <router-view />
+  <router-view v-slot="{ Component }">
+    <transition name="fade" mode="out-in">
+      <component :is="Component"></component>
+    </transition>
+  </router-view>
 </template>
+
 <script>
 export default {
   data: () => {
@@ -61,13 +65,31 @@ export default {
       this.showSidebar = !this.showSidebar;
     },
   },
+
+
 };
 </script>
 
 <style lang="scss">
 @import url(~@/assets/sass/_globales.scss);
 
-
+/** route transition **/
+.fade-enter-from {
+  opacity: 0;
+  transform: translateX(100px) skewX(2deg);
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.6s ease-in-out;
+}
+.fade-leave-to {
+  opacity: 0;
+  transform: translateX(-100px) skewX(2deg);
+}
+.fade-leave-active,
+.fade-enter-from {
+  transition: all 0.6s ease-in;
+}
 
 .home-redes {
   display: flex;
@@ -75,6 +97,7 @@ export default {
   flex-direction: column;
   align-items: center;
   height: 100%;
+  z-index: 155;
   background-color: $blanco;
   position: absolute;
   transition: all 1s ease;
@@ -164,6 +187,9 @@ export default {
   
   .nav-link p {
     cursor: pointer;
+        background: $negro;
+    color: $blanco;
+    padding: .1em .3em;
     transition: all .6s ease;
     position: absolute;
     opacity: 0;
@@ -171,6 +197,8 @@ export default {
     @media screen and(max-width:  1100px) {
       left: -200%;
       right: 0;
+      background: transparent;
+      color: black;
     }
   }
   .home-navigation {
@@ -207,6 +235,7 @@ export default {
       position: relative;
       justify-content: center;
       transition: all 1s ease;
+      
       @media screen and(max-width: 1100px) {
       display: block;
       margin: 0 auto;
@@ -217,12 +246,12 @@ export default {
       }
       i {
         font-size:calc(.6rem + .9vw);
-
+    
       }
     }
     i {
       color: #131313;
-     
+      
       font-size: 1.2em;
     }
 
@@ -248,33 +277,5 @@ export default {
     }
   }
 }
-.fa-home{
-  overflow: visible;
 
-  &:hover::after {
-    opacity: 1;
-    left: 70%;
-  }
- &::after {
-    @include menu-hover('Home');
- }
-}
-.fa-info {
-  &:hover::after {
-    opacity: 1;
-    left: 70%;
-  }
-  &::after {
-     @include menu-hover('Acerca');
-  }
-}
-.fa-calendar {
-  &:hover::after {
-    opacity: 1;
-    left: 70%;
-  }
-  &::after {
-    @include menu-hover('Reserva');
-  }
-}
 </style>

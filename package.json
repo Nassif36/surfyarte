@@ -10,8 +10,10 @@
   "dependencies": {
     "@fortawesome/vue-fontawesome": "^3.0.0-5",
     "core-js": "^3.6.5",
+    "gsap": "^3.8.0",
     "sass": "^1.43.2",
     "vue": "^3.0.0",
+    "vue-animations": "^0.0.1",
     "vue-loader": "^15.9.8",
     "vue-router": "^4.0.0-0",
     "vue3-transitions": "^1.0.0",
