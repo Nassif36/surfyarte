@@ -51,10 +51,14 @@
       <component :is="Component"></component>
     </transition>
   </router-view>
+
 </template>
 
 <script>
+ 
+
 export default {
+
   data: () => {
     return {
       showSidebar: false,
@@ -262,8 +266,8 @@ export default {
       justify-content: flex-end;
       gap: 10%;
       height: 40%;
-      padding-bottom: 50%;
-      gap: 20%;
+      padding: 1% 0 25% 0;
+      gap: 10%;
 
       .fa-instagram {
         color: #ff1e00;

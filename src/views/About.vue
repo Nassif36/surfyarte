@@ -76,22 +76,16 @@ export default {
       padding: 1em;
       margin: .5em 0;
       border-radius: 3px;
-      font-size: 1.2rem;
-      font-weight: 300;
+
       color: #161616;
       line-height: 130%;
       a {
         font-size: 1.2rem;
-        color: blue;
-        font-weight: 400;
+        color: $primary;
       }
       &:first-of-type {
-        font-weight: 600;
         color: $negro;
         margin: 0 auto;
-        a {
-          font-weight: 600;
-        }
       }
       &:last-of-type::first-letter {
         font-size: 2.4rem;

@@ -1,17 +1,35 @@
+
+// Colores
 $blanco: #f4f4f4;
 $negro: #131313;
 $primary: #1ac6cc;
 $secondary: #e72de7;
 $green: #1fb326;
+// Media Queries
+$telefono: 480px;
+$tablet: 1050px;
+$desktop: 1200px;
 
+// Fuentes
+$delgada: 300;
+$regular: 400;
+$bold: 700;
+$black: 900;
+
+// Separaciones
 $paddingSide: 90px;
 $separacion: 1.2em;
+
+// Extra
 $radius: 33px;
 $shadow: -2px 13px 42px -17px rgba(0, 0, 0, 0.8);
 
 @mixin gradient($primero, $segundo) {
-    background: linear-gradient(to right, $primero 50%, $segundo 0);
+    background: linear-gradient(to bottom, $primero 0%, $segundo 0);
 
+    @include tablet {
+        background: linear-gradient(to right, $primero 50%, $segundo 0);
+    }
 }
 
 @mixin section($background) {
@@ -44,28 +62,25 @@ $shadow: -2px 13px 42px -17px rgba(0, 0, 0, 0.8);
     transition: all .6s ease;
 }
 
-@mixin menu-hover($palabra) {
-        font-family: 'Alegreya Sans SC',
-        sans-serif;
-        content: $palabra;
-        position: absolute;
-        inset: 0;
-        top: 0%;
-        left: 95%;
-        padding: .3em .2em;
-        height: max-content;
-        font-size: 1rem;
-        text-align: center;
-        z-index: 15;
-        overflow: visible;
-        display: block;
-        width: 100px;   
-        transition: all 1s ease;
-        transition-delay: .2s;
-        opacity: 0;
-        font-weight: 300;
-        background: $negro;
-        color: white;
-        border-radius: 3px;
 
-}
+
+
+@mixin telefono {
+    @media (min-width: $telefono) {
+        @content
+    }
+};
+
+
+
+@mixin tablet {
+    @media (min-width: $tablet) {
+        @content
+    }
+};
+
+@mixin desktop {
+    @media (min-width: $desktop) {
+        @content
+    }
+};

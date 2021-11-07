@@ -16,6 +16,10 @@ h1 {
 h2 {
     font-size: calc(1vw + 1.2rem);
 }
+
+p {
+    font-size:clamp(.9rem, 1.1rem, 1.2rem);
+}
 li {
     list-style: none;
 }
