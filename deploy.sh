@@ -6,12 +6,10 @@ npm run build
 
 cd dist 
 
-git init
-
 git add -A
 
 git commit -m 'nuevo deployment'
 
-git push -f https://github.com/Nassif36/surfyarte main:gh-pages
+git push -f git@github.com/Nassif36/surfyarte.git main:gh-pages
 
 cd -
