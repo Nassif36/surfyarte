@@ -10,6 +10,6 @@ git add -A
 
 git commit -m 'nuevo deployment'
 
-git push origin gh-pages
+git push origin gh-git
 
 cd -
