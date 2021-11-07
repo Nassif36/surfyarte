@@ -10,6 +10,6 @@ git add -A
 
 git commit -m 'nuevo deployment'
 
-git push -f git@github.com/Nassif36/surfyarte main:gh-pages
+git push -f github.com/Nassif36/surfyarte main:gh-pages
 
 cd -
