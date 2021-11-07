@@ -8,6 +8,6 @@ cd dist
 
 git commit -m 'nuevo deployment'
 
-git -f https://github.com/Nassif36/surfyarte.git master:gh-pages
+git -f git@github.com:Nassif36/surfyarte.git master:front
 
 cd -
