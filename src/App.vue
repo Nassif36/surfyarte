@@ -80,7 +80,7 @@ export default {
 /** route transition **/
 .fade-enter-from {
   opacity: 0;
-  transform: translateX(100px) skewX(2deg);
+  transform: translateX(100px) skewX(1deg);
 }
 .fade-enter-active,
 .fade-leave-active {
@@ -88,7 +88,7 @@ export default {
 }
 .fade-leave-to {
   opacity: 0;
-  transform: translateX(-100px) skewX(2deg);
+  transform: translateX(-100px) skewX(1deg);
 }
 .fade-leave-active,
 .fade-enter-from {

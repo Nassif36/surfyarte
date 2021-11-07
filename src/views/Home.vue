@@ -22,31 +22,9 @@
       </div>
     </section>
     <section class="home-fade">
-      <div ref="mapDiv" style="width: 100%; height: 80vh;" />
+      <div ref="mapDiv" style="width: 100%; height: 100vh;" />
 
-      <transition-group tag="div" class="home-grid" name="fade">
-        <div
-          class="fade-item"
-          v-for="(icon, index) in icons"
-          :key="icon.name"
-          :data-index="index"
-        >
-          <h3>{{ icon.name }}</h3>
-          <img src="~@/assets/group.png" alt="" />
-        </div>
-        <div class="fade-item">
-          <h3>Intermedio</h3>
-          <img src="~@/assets/german.png" alt="" />
-        </div>
-        <div class="fade-item">
-          <h3>Avanzado</h3>
-          <img src="~@/assets/dany.jpg" alt="" />
-        </div>
-        <div class="fade-item">
-          <h3>Personalizado</h3>
-          <img src="~@/assets/pexels.jpg" alt="" />
-        </div>
-      </transition-group>
+      
     </section>
   </main>
 </template>
@@ -90,7 +68,7 @@ export default {
       await loader.load();
       const map = new google.maps.Map(mapDiv.value, {
         center: currPos.value,
-        zoom: 13,
+        zoom: 14,
         disableDefaultUI: true,
         zoomControl: true,
 
@@ -99,12 +77,14 @@ export default {
       const marker = new google.maps.Marker({
         position: currPos.value,
         map: map,
+         icon: 'https://img.icons8.com/color/53/000000/surfboard.png',
         label: {
           fontSize: "13pt",
           fontWeight: "bold",
           color: "black",
-          text: " Escuela de Surf & Arte",
-        },
+
+        }
+       
       });
     });
     return { icons, beforeEnter, enter, currPos, mapDiv };
