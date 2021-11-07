@@ -1,6 +1,8 @@
 // vue.config.js
 module.exports = {
-    publicPath: '/surfyarte/',
+    publicPath: process.env.NODE_ENV === 'production' ?
+        '/surfyarte/' :
+        '/',
     css: {
         loaderOptions: {
             sass: {
