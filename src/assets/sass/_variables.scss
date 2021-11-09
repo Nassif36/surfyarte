@@ -17,7 +17,7 @@ $bold: 700;
 $black: 900;
 
 // Separaciones
-$paddingSide: 90px;
+$paddingSide: 70px;
 $separacion: 1.2em;
 
 // Extra
@@ -25,7 +25,7 @@ $radius: 33px;
 $shadow: -2px 13px 42px -17px rgba(0, 0, 0, 0.8);
 
 @mixin gradient($primero, $segundo) {
-    background: linear-gradient(to bottom, $primero 0%, $segundo 0);
+
 
     @include tablet {
         background: linear-gradient(to right, $primero 50%, $segundo 0);

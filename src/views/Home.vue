@@ -98,6 +98,10 @@ export default {
   height: 100vh;
   background: #f4f4f4;
   @include gradient($blanco, $primary);
+  @media screen and(max-width: 768px) {
+    flex-direction: column;
+    height: 50vh;
+  }
 
   .home-text {
     display: flex;
@@ -105,9 +109,11 @@ export default {
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    flex-basis: 50%;
+   
     height: 85%;
-
+    @media screen and(min-width: 1050px) {
+       flex-basis: 50%;
+    }
     .home-text-h1 {
       border-radius: 1px;
       padding: 1em 2em;

@@ -102,10 +102,10 @@ export default {
   align-items: center;
   height: 100%;
   z-index: 155;
-  background-color: $blanco;
+  background-color: white;
   position: absolute;
   transition: all 1s ease;
-  box-shadow: 1px 1px 1px 3px #0000001e;
+
   .logo {
     padding-top: 15%;
     img {
@@ -119,7 +119,7 @@ export default {
     transition: all 1s ease;
     
     .bar {
-      width: calc(1vw + 1em);
+      width: calc(1vw + .5em);
       height: 3px;
       margin: .2em 0;
       color: black;
@@ -131,7 +131,7 @@ export default {
     }
   }
   &.show {
-    background-color: #f4f4f4;
+    
     .home-navigation {
      width: 22vw;
      @media screen and(max-width:  1100px) {
@@ -213,7 +213,7 @@ export default {
     align-items: center;
     gap: 5%;
     height: 100%;
-    width: 80px;
+    width:70px;
     transition: all 1s ease;
     .nav-link {
       width: 100%;
@@ -249,7 +249,7 @@ export default {
       overflow: unset;
       }
       i {
-        font-size:calc(.6rem + .9vw);
+        font-size:calc(1rem + .3vw);
     
       }
     }
